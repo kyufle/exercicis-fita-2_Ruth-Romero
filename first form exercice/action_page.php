@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <link rel="stylesheet" href="/form.css">
 </head>
 <body>
     <?php
@@ -16,12 +17,8 @@
     $userName = $_POST["usuari"];
     $password = $_POST["contrasenya"];
     if(isset($userName) && array_key_exists($userName, $usersDictionary) && $usersDictionary[$userName] === $password){
-        $userExist = true;
-    }
-    
-    if($userExist){
         echo "Login correcte";
-    } else {
+    } else{
         echo "Login incorrecte";
     }
     ?>
