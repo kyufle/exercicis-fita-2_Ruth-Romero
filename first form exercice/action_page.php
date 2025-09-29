@@ -9,25 +9,20 @@
     <?php
     $usersDictionary = [
         "gos" => "bup",
-        "gat" => "miau"
+        "gat" => "miau",
     ];
 
     $userExist = false;
-    
-    if(isset($_GET["usuari"])){
-         $usuari = $_GET["usuari"];
-          if (array_key_exists($usuari, $usersDictionary)) {
-            $userExist = true;
-        }
-
-        if ($userExist) {
-            $echo "<p>Usuari trobat: $usuari</p>";
-        } else {
-            $echo "<p>Usuari no trobat</p>";
-        }
+    $userName = $_POST["usuari"];
+    $password = $_POST["contrasenya"];
+    if(isset($userName) && array_key_exists($userName, $usersDictionary) && $usersDictionary[$userName] === $password){
+        $userExist = true;
     }
-    else{
-        $echo "<p>Usuari no trobat</p>";
+    
+    if($userExist){
+        echo "Login correcte";
+    } else {
+        echo "Login incorrecte";
     }
     ?>
 </body>
