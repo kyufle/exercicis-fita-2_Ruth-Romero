@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User form</title>
+    <title>User form - Ruth Romero</title>
 </head>
 <body>
     <form action="post" action=/action_page.php>
